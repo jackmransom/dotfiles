@@ -67,3 +67,7 @@ if !exists('g:airline_symbols')
 endif
 let g:airline_symbols.space = "\ua0"
 let g:airline_theme='solarized'
+
+"Syntastic
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '!'
