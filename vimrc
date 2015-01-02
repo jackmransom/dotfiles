@@ -1,5 +1,17 @@
-execute pathogen#infect()
+set shell=/bin/bash
 set nocompatible
+
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/syntastic'
+Plugin 'bling/vim-airline'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'airblade/vim-gitgutter'
+call vundle#end()
 filetype plugin indent on
 set history=700
 set autoread
@@ -12,7 +24,6 @@ set laststatus=2
 set number
 set numberwidth=5
 set ruler
-set cmdheight=2
 
 set hid
 
