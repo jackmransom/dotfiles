@@ -52,7 +52,7 @@ syntax enable
 colorscheme solarized
 set background=dark
 set encoding=utf8
-set t_Co=256
+set t_Co=16
 set ffs=unix,dos,mac
 
 set nobackup
@@ -82,3 +82,6 @@ let g:airline_theme='solarized'
 "Syntastic
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
+
+"Keybindings
+nnoremap ; :
