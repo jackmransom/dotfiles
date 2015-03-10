@@ -2,16 +2,22 @@ set shell=/bin/bash
 set nocompatible
 
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/syntastic'
-Plugin 'bling/vim-airline'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'airblade/vim-gitgutter'
-call vundle#end()
+
+if empty(glob("~/.vim/autoload/plug.vim"))
+    execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+endif
+
+call plug#begin()
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/syntastic'
+Plug 'bling/vim-airline'
+Plug 'altercation/vim-colors-solarized'
+Plug 'edkolev/tmuxline.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'rust-lang/rust.vim'
+call plug#end()
+
+
 filetype plugin indent on
 set history=700
 set autoread
