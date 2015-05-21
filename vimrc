@@ -1,10 +1,9 @@
-set shell=/bin/bash
 set nocompatible
-
-filetype off
-
-if empty(glob("~/.vim/autoload/plug.vim"))
-    execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+if has("unix")
+	set shell=/bin/bash
+	if empty(glob("~/.vim/autoload/plug.vim"))
+		execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+	endif
 endif
 
 call plug#begin()
