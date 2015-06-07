@@ -13,7 +13,11 @@ Plug 'bling/vim-airline'
 Plug 'altercation/vim-colors-solarized'
 Plug 'edkolev/tmuxline.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'ervandew/supertab'
+if has("unix")
+  Plug 'Valloric/YouCompleteMe'
+else
+  Plug 'ervandew/supertab'
+endif
 Plug 'rust-lang/rust.vim'
 call plug#end()
 
