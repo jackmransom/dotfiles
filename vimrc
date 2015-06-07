@@ -13,6 +13,7 @@ Plug 'bling/vim-airline'
 Plug 'altercation/vim-colors-solarized'
 Plug 'edkolev/tmuxline.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'ervandew/supertab'
 Plug 'rust-lang/rust.vim'
 call plug#end()
 
@@ -45,7 +46,7 @@ set lazyredraw
 set magic
 
 set showmatch
-set mat=22
+set mat=3
 
 set noerrorbells
 set novisualbell
@@ -66,8 +67,8 @@ set noswapfile
 
 set expandtab
 set smarttab
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 set lbr
 set tw=500
@@ -88,5 +89,16 @@ let g:airline_theme='solarized'
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '!'
 
+function! <SID>StripTrailingWhitespaces()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  call cursor(l,c)
+endfun
+
 "Keybindings
 nnoremap ; :
+nnoremap <F5> :wa<bar>make!<cr>
+
+au VimEnter * vsplit
+au BufWritePre *.h,*.c,*.cpp :call <SID>StripTrailingWhitespaces()
