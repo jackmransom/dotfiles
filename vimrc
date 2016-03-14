@@ -9,12 +9,15 @@ endif
 call plug#begin()
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/syntastic'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
 Plug 'edkolev/tmuxline.vim'
 Plug 'airblade/vim-gitgutter'
 if has("unix")
   Plug 'Valloric/YouCompleteMe'
+  Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+  Plug 'jeaye/color_coded'
 else
   Plug 'ervandew/supertab'
 endif
@@ -104,5 +107,4 @@ endfun
 nnoremap ; :
 nnoremap <F5> :wa<bar>make!<cr>
 
-au VimEnter * vsplit
 au BufWritePre *.h,*.c,*.cpp :call <SID>StripTrailingWhitespaces()
