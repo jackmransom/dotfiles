@@ -1,2 +1,2 @@
-EXCLUDES="README.md LICENSE"
+EXCLUDES="README.md LICENSE skel_ycm_extra_conf.py"
 DOTFILES_DIRS="$HOME/dotfiles"
