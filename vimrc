@@ -62,6 +62,15 @@ syntax enable
 
 colorscheme solarized
 set background=dark
+
+if has("gui_running")
+  set guifont=Source\ Code\ Pro\ For\ Powerline\ Medium\ 11
+  set guioptions-=L
+  set guioptions-=T
+  set guioptions-=m
+  set guioptions-=r
+endif
+
 set encoding=utf8
 set t_Co=16
 set ffs=unix,dos,mac
