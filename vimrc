@@ -14,12 +14,10 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
 Plug 'edkolev/tmuxline.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'Valloric/YouCompleteMe'
 if has("unix")
-  Plug 'Valloric/YouCompleteMe'
-  Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
   Plug 'jeaye/color_coded'
-else
-  Plug 'ervandew/supertab'
+  Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 endif
 Plug 'rust-lang/rust.vim'
 call plug#end()
