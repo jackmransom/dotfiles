@@ -55,3 +55,6 @@
 (setq js-indent-level 2)
 
 (electric-pair-mode 1)
+
+(setq ring-bell-function 'ignore)
+
