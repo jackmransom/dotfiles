@@ -52,3 +52,6 @@
 (scroll-bar-mode -1)
 (menu-bar-mode -1)
 
+(setq js-indent-level 2)
+
+(electric-pair-mode 1)
