@@ -44,9 +44,20 @@
 	     (helm-mode 1)
 	     )
 
+(use-package magit
+  :ensure t)
 
-(load-theme `solarized-dark t)
-(sml/setup)
+(use-package smart-mode-line
+  :ensure t
+  :config
+  (sml/setup)
+  )
+
+(use-package solarized-theme
+  :ensure t
+  :config
+  (load-theme `solarized-dark t)
+  )
 
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
